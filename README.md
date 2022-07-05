@@ -22,8 +22,8 @@ $currencyAPI->cacheDirectory(__DIR__.'/cache');
 
 //Connect with Currency Layer and as optional connect with OpenExchangeRates. The optional provider is useful if the primary provider fails.
 $currencyAPI->provider(
-	new CurrencyAPI\Providers\CurrencyLayer('e71339281eb366b480b130fc9bb92ec7'),
-	new CurrencyAPI\Providers\OpenExchangeRates('881904f91bdb4c6799b3f861d021c7f7')
+	new CurrencyAPI\Providers\CurrencyLayer('CURRENCY_LAYER_API'),
+	new CurrencyAPI\Providers\OpenExchangeRates('OPEN_EXCHANGE_RATES_API')
 );
 //Free Api accepts as base currency USD symbol, you can change it if you are using paid version
 $rate = $currencyAPI->getRate('USD', 'PEN');
